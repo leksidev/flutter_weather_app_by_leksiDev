@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_app_by_LeksiDEV/screens/loading_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void Main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: const LoadingScreen(),
+    );
   }
 }
