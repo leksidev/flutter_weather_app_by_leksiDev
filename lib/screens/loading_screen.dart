@@ -8,7 +8,7 @@ const apiKey = 'cf56b3288aea7bdbb6432d42b2eaef2f';
 const authority = 'api.openweathermap.org';
 const path = '/data/2.5/weather';
 const lang = 'en';
-const units = 'standart';
+const units = 'metric';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
@@ -18,9 +18,6 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-  late double longetude;
-  late double latitude;
-
   @override
   void initState() {
     super.initState();
@@ -33,16 +30,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
     await location.getCurrentLocation();
 
-    latitude = location.latitude;
-    longetude = location.longitude;
-
     NetworkHelper networkHelper = NetworkHelper(
       url: Uri.https(
         authority,
         path,
         {
-          'lat': latitude.toString(),
-          'lon': longetude.toString(),
+          'lat': location.latitude.toString(),
+          'lon': location.longitude.toString(),
           'appid': apiKey,
           'lang': lang,
           'units': units,
