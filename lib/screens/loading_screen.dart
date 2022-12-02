@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -15,7 +17,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
         permission != LocationPermission.deniedForever) {
       Position position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.low);
+      print(position);
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getLocation();
   }
 
   @override
@@ -24,7 +33,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            getLocation();
+            // getLocation();
+            null;
           },
           child: const Text('Get Location'),
         ),
