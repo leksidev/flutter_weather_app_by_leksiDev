@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app_by_LeksiDEV/utilites/constants.dart';
+import 'package:flutter_weather_app_by_leksidev/utilites/constants.dart';
 
 class LocationScreen extends StatefulWidget {
   const LocationScreen({super.key});
@@ -50,12 +50,12 @@ class _LocationScreenState extends State<LocationScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 15.0),
                 child: Row(
-                  children: <Widget>[
-                    const Text(
+                  children: const <Widget>[
+                    Text(
                       '32°',
                       style: kTempTextStyle,
                     ),
-                    const Text(
+                    Text(
                       '☀️',
                       style: kConditionTextStyle,
                     ),

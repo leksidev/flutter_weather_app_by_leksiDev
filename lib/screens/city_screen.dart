@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app_by_LeksiDEV/utilites/constants.dart';
+import 'package:flutter_weather_app_by_leksidev/utilites/constants.dart';
 
 class CityScreen extends StatefulWidget {
   const CityScreen({super.key});
