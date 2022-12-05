@@ -1,7 +1,8 @@
 import 'package:flutter_weather_app_by_leksidev/services/location.dart';
 import 'package:flutter_weather_app_by_leksidev/services/networking.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-const apiKey = 'cf56b3288aea7bdbb6432d42b2eaef2f';
+var apiKey = env['apiKey'];
 const authority = 'api.openweathermap.org';
 const path = '/data/2.5/weather';
 const lang = 'en';
