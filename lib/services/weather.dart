@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_weather_app_by_leksidev/services/location.dart';
 import 'package:flutter_weather_app_by_leksidev/services/networking.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -32,35 +33,35 @@ class WeatherModel {
     return weatherData;
   }
 
-  String getWeatherIcon(int condition) {
+  IconData getWeatherIcon(int condition) {
     if (condition < 300) {
-      return '🌩';
+      return Icons.thunderstorm;
     } else if (condition < 400) {
-      return '🌧';
+      return Icons.cloudy_snowing;
     } else if (condition < 600) {
-      return '☔️';
+      return Icons.umbrella;
     } else if (condition < 700) {
-      return '☃️';
+      return Icons.ac_unit;
     } else if (condition < 800) {
-      return '🌫';
+      return Icons.foggy;
     } else if (condition == 800) {
-      return '☀️';
+      return Icons.sunny;
     } else if (condition <= 804) {
-      return '☁️';
+      return Icons.cloud;
     } else {
-      return '🤷‍';
+      return Icons.warning;
     }
   }
 
   String getMessage(int temp) {
     if (temp > 25) {
-      return 'It\'s 🍦 time';
+      return 'Самое время для 🍦 ';
     } else if (temp > 20) {
-      return 'Time for shorts and 👕';
+      return 'Можно смело надевать шорты и 👕';
     } else if (temp < 10) {
-      return 'You\'ll need 🧣 and 🧤';
+      return 'Не забудьте надеть 🧣 и 🧤';
     } else {
-      return 'Bring a 🧥 just in case';
+      return 'Не помешает надеть 🧥 ';
     }
   }
 }
