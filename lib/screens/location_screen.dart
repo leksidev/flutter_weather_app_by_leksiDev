@@ -16,7 +16,7 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   WeatherModel weather = WeatherModel();
   late num temperature;
-  late String weatherIcon;
+  late IconData weatherIcon;
   late String locationName;
   late String weatherMessage;
 
@@ -30,7 +30,7 @@ class _LocationScreenState extends State<LocationScreen> {
     setState(() {
       if (weatherData == null) {
         temperature = 0;
-        weatherIcon = 'Error';
+        weatherIcon = Icons.error;
         weatherMessage = 'Unable to get weather data';
         locationName = '';
         return;
@@ -91,10 +91,8 @@ class _LocationScreenState extends State<LocationScreen> {
                       '$temperature°',
                       style: kTempTextStyle,
                     ),
-                    Text(
-                      weatherIcon,
-                      style: kConditionTextStyle,
-                    ),
+
+                    Icon(weatherIcon, size: 200.0,),
                   ],
                 ),
               ),
