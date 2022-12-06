@@ -99,7 +99,7 @@ class _LocationScreenState extends State<LocationScreen> {
               Padding(
                 padding: const EdgeInsets.only(right: 15.0),
                 child: Text(
-                  "$weatherMessage in $locationName!",
+                  "$weatherMessage, выходя на улицу в населенном пункте $locationName",
                   textAlign: TextAlign.right,
                   style: kMessageTextStyle,
                 ),

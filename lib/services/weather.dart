@@ -6,7 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 var apiKey = env['apiKey'];
 const authority = 'api.openweathermap.org';
 const path = '/data/2.5/weather';
-const lang = 'en';
+const lang = 'ru';
 const units = 'metric';
 
 class WeatherModel {
